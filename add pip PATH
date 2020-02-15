@@ -1,0 +1,7 @@
+how to add pip PATH
+
+1. check path
+>> echo $PATH
+2. if it shows different path between Pycharm and termianl
+then if you need to add new path, command like below
+>> export PATH="/Users/eunwoo/PycharmProjects/django-project/django_project/venv/bin:$PATH"
