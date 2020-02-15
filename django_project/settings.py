@@ -115,7 +115,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    "/Users/eunwoo/PycharmProjects/django-project/django_project/static"
+    "/Users/eunwoo/PycharmProjects/django-project/static"
     , ]
 
 MEDIA_URL = '/media/'
