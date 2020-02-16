@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="TerminalProjectOptionsProvider">
-    <envs>
-      <env key="EMAIL_USER" value="$USER_HOME$/.bash_profile" />
-      <env key="EMAIL_PASS" value="$USER_HOME$/.bash_profile" />
-    </envs>
-  </component>
-</project>

@@ -5,3 +5,4 @@ how to add pip PATH
 2. if it shows different path between Pycharm and termianl
 then if you need to add new path, command like below
 >> export PATH="/Users/eunwoo/PycharmProjects/django-project/django_project/venv/bin:$PATH"
+3. add to .zshrc (.bash_profile에 추가해도 source가 안됨, zshrc에 넣으닌깐 PATH가 제대로 추가되는 듯 -> 이유모름)
