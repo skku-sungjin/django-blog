@@ -50,7 +50,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware', # For heroku
 ]
+
+
 
 ROOT_URLCONF = 'django_project.urls'
 
@@ -118,7 +121,8 @@ USE_TZ = True
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') # added for heroku
 STATIC_URL = '/static/'
-
+# For heroku
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage' 
 # uncommented due to heroku master error !
 # STATICFILES_DIRS = [
 #     "/Users/eunwoo/PycharmProjects/django-project/django_project/static"
