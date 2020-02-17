@@ -123,7 +123,9 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') # added for heroku
 STATIC_URL = '/static/'
 # For heroku
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage' 
+#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
 # uncommented due to heroku master error !
 # STATICFILES_DIRS = [
 #     "/Users/eunwoo/PycharmProjects/django-project/django_project/static"
