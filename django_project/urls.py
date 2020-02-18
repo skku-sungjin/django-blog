@@ -15,26 +15,26 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.contrib.auth import views as auth_view
-from users import views as user_view
+from django.contrib.auth import views as auth_views
+from users import views as user_views
 from django.conf import settings
 from django.conf.urls.static import static
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('register/', user_view.register, name='blog-register'),
-    path('login/', auth_view.LoginView.as_view(template_name='users/login.html'), name='blog-login'),
-    path('logout/', auth_view.LogoutView.as_view(template_name='users/logout.html'), name='blog-logout'),
+    path('register/', user_views.register, name='blog-register'),
+    path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='blog-login'),
+    path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='blog-logout'),
     path('password-reset/',
-         auth_view.PasswordResetView.as_view(template_name='users/password_reset.html'), name='password_reset'),
+         auth_views.PasswordResetView.as_view(template_name='users/password_reset.html'), name='password_reset'),
     path('password-reset/done/',
-         auth_view.PasswordResetDoneView.as_view(template_name='users/password_reset_done.html'), name='password_reset_done'),
+         auth_views.PasswordResetDoneView.as_view(template_name='users/password_reset_done.html'), name='password_reset_done'),
     path('password-reset-confirm/<uidb64>/<token>/',
-         auth_view.PasswordResetConfirmView.as_view(template_name='users/password_reset_confirm.html'), name='password_reset_confirm'),
+         auth_views.PasswordResetConfirmView.as_view(template_name='users/password_reset_confirm.html'), name='password_reset_confirm'),
     path('password-reset-complete/',
-         auth_view.PasswordResetCompleteView.as_view(template_name='users/password_reset_complete.html'), name='password_reset_complete'),
-    path('profile/', user_view.profile, name='blog-profile'),
+         auth_views.PasswordResetCompleteView.as_view(template_name='users/password_reset_complete.html'), name='password_reset_complete'),
+    path('profile/', user_views.profile, name='blog-profile'),
     path('', include('blog.urls'))
 ]
 
