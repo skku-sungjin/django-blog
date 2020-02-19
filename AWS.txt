@@ -1,0 +1,8 @@
+S3 in AWS (Amazon Web Service)
+when not showing image in heroku server with django project
+1. Bucket => make public
+2. add below CODE in settings.py
+    ERROR message :
+    The authorization mechanism you have provided is not supported. Please use AWS4-HMAC-SHA256
+    CODE :
+    AWS_S3_REGION_NAME = "ap-northeast-2"
