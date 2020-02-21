@@ -7,3 +7,11 @@ when not working -> pip3 install django-heroku
 
 reference URL :
 https://stackoom.com/question/3sM2w/Django-pip-install-django-heroku-psycopg-%E9%94%99%E8%AF%AF%E9%98%BB%E6%AD%A2%E9%83%A8%E7%BD%B2%E5%88%B0Heroku
+
+
+
+>> heroku config
+# setting 상태확인
+
+>> heroku config:set EMAIL_PASS="blah-blah"
+# You should change this if you've changed your Gmail password
